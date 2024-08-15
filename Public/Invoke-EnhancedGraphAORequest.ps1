@@ -1,4 +1,4 @@
-function Invoke-GraphRequest {
+function Invoke-EnhancedGraphAORequest {
     param (
         [string]$Method,
         [string]$Uri,
