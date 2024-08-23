@@ -1,4 +1,4 @@
-#the following function work in GUI mode but not in containers and honestly the idea of it having to start a PowerShell session is not vert appealing sure we start seperate powershell sessions all of the time but we need to figure out a way to make it work inside of containers
+#the following function work in GUI mode but not in containers and honestly the idea of it having to start a PowerShell session is not very appealing sure we start seperate powershell sessions all of the time but we need to figure out a way to make it work inside of containers
 
 
 # function Run-DumpAppListToJSON {
