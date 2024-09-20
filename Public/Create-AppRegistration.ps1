@@ -7,7 +7,7 @@ function Create-AppRegistration {
 
     try {
         if (-Not (Test-Path $PermsFile)) {
-            Write-EnhancedLog -Message "Permissions file not found: $PermsFile" -Level "ERROR" -ForegroundColor ([ConsoleColor]::Red)
+            Write-EnhancedLog -Message "Permissions file not found: $PermsFile" -Level "ERROR"
             throw "Permissions file missing"
         }
     
@@ -39,11 +39,11 @@ function Create-AppRegistration {
         $app = New-MgApplication -DisplayName $AppName -SignInAudience "AzureADMyOrg" -RequiredResourceAccess $requiredResourceAccess
     
         if ($null -eq $app) {
-            Write-EnhancedLog -Message "App registration failed" -Level "ERROR" -ForegroundColor ([ConsoleColor]::Red)
+            Write-EnhancedLog -Message "App registration failed" -Level "ERROR"
             throw "App registration failed"
         }
     
-        Write-EnhancedLog -Message "App registered successfully" -Level "INFO" -ForegroundColor ([ConsoleColor]::Cyan)
+        Write-EnhancedLog -Message "App registered successfully" -Level "INFO"
         return @{ App = $app; TenantDetails = $tenantDetails }
         
     }
